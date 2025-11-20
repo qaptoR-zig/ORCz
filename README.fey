@@ -1,0 +1,49 @@
+
+
+
+
+
+    I. ORCz
+
+
+      .g8""8q. `7MM"""Mq.   .g8"""bgd
+    .dP'    `YM. MM   `MM..dP'     `M
+    dM'      `MM MM   ,M9 dM'       `M"""MMV
+    MM        MM MMmmdM9  MM         '  AMV
+    MM.      ,MP MM  YM.  MM.          AMV
+    `Mb.    ,dP' MM   `Mb.`Mb.     ,' AMV  ,
+      `"bmmd"' .JMML. .JMM. `"bmmmd' AMMmmmM
+
+
+
+    II. Introduction
+
+    You can read more about why this project started in the /lore/purpose.fey
+    document, which may be updated from time to time.
+
+    tl;dr This is a library for features of zig that are missing or become
+    deprecated that I can't live without.
+
+
+    III. What is Fey file format?
+
+    Fey is a new markup language format. Specification of the language can be found at:
+    [Url] https://github.com/Loreite/Fey
+
+    It is extremely early in development, and it is not recommended that anyone use it
+    themselves unless they are prepared to deal with a continually changing specification.
+
+    However, it is used in this project (as well as for its own documentation), so consider this
+    a demonstration of its capabilities. (More or less what it looks like to use).
+
+    Feel free to play around with it however, and contribute suggestions to the project.
+
+    One thing to note is that Fey is designed to be different for each individual user, which is
+    where it gets the name. There is nothing wrong with your Fey files looking different from
+    any others. The specification of an eventual Fey interpreter will be the only thing that
+    ultimately determines what is valid Fey or not, and it is intended to be scriptable.
+
+
+
+
+

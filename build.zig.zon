@@ -1,0 +1,12 @@
+.{
+    .name = .orcz,
+    .version = "0.0.1",
+    .fingerprint = 0xeb742431394574a8, // Changing this has security and trust implications.
+    .minimum_zig_version = "0.15.2",
+    .dependencies = .{},
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+    },
+}

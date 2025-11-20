@@ -1,0 +1,18 @@
+misc/
+*.copy.*
+*.temp*.*
+*.todo.*
+*.bin.*
+
+.zig-cache/
+zig-out/
+/release/
+/debug/
+/build/
+/build-*/
+/docgen_tmp/
+
+# this was renamed to .zig-cache, we will leave it here for a few
+# releases to make it less annoying to work with multiple branches.
+zig-cache/
+

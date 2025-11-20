@@ -1,0 +1,77 @@
+
+
+
+
+
+
+    I. Introduction
+    I very much love zig since I first began using it. I wrote my version of the
+    CLox interpreter from the book "Crafting Interpreters" by Robert Nystrom and
+    really never looked back when it came to systems level languages.
+
+    Obviously right now (currently 0.15.2) the language is still in flux, and
+    even though I joined the freay at 0.11, I've been mostly happy with the
+    changes and updates, especially new features.
+
+    But certain features also get deprecated, and when I didn't use them before
+    I never noticed them disappear. But the first time I did notice was with the
+    ArrayList. This was one of my first joys with Zig. I think it's a wonderful
+    datatype and I thought it was very ergonomic. Now I don't have the same
+    memory constraints in my programs as maybe others do, so I don't mind the
+    overhead of carrying around the reference to the allocator in the ArrayList
+    itself. And I don't mind the default being swapped around between managed
+    and unmanaged, but I do mind that the managed version is being deprecated.
+    That's my good friend right there getting swept out the door!
+
+    So I decided to start keeping track of all the little features that I miss
+    (maybe even sometimes going back to older versions of zig to see what
+    disappeared without my notice) and adding them to this library if I feel
+    that I might use them in the future (it doesn't even really have to be
+    guaranteed).
+
+    The first addition of course is a wrapper around the new Arraylist (previously
+    ArrayListUnmanaged). Maybe I'll get used to the new 'unmanaged' way of doing
+    things that ARK deems the proper way, but for now this is my little mound to
+    stand on and say "I will not let them go silently into the night!".
+
+
+    II. What about the name?
+    So the name comes from the idea I had for a suite of languages, all with the
+    following names:
+
+    Orc - Systems Language     :C, C++, Zig, Rust
+    Man - Application Language :C#, Java, Go, Scala
+    Elf - Scripting Language   :Python, Lua, JavaScript, Ruby
+    Fey - Modal Language       :Org, MD, TOML, YAML, JSON, LaTeX, Typst
+
+    I was initially going to write them from scratch, but then when I started
+    using zig, I realized that I'd rather just use it as a jumping off point
+    once it gets to version 1.0 or later (more stable and easier to stay on par
+    with the changes), since I'd only be adding features that I want, including
+    a bit of syntactic sugar that I have planned for my scripting language.
+
+    I had originally planned for them all to look exactly the same, but now I
+    think that, while there will be similar features (like some operators i've
+    concocted, etc), it's okay if they look different, because just like how
+    their namesakes are all humanoids, they all have very different looks and
+    ways that they interact with fantasy fiction.
+
+    so ORCz is a way to keep the name fundamentally similar to my future plans
+    without staking a claim over it before I'm ready to use it.
+
+    Technically you're already reading Fey, btw. It might not look like much at
+    the moment, but eventually it will be a lot more well defined. Really, what
+    it is, is a way for making all types of text files: serialization/settings,
+    notes, and document generation all look exactly the way I want them too,
+    whilst building in a well defined way to allow others to do the same all
+    look exactly the way I want them too, whilst building in a well defined way
+    to allow others to do the same.
+
+    Mostly, all of this comes down to aesthetics. I do a lot of reading and
+    writing, so text is a big part of what I look at daily, and I just think
+    that it ought to be beautiful as a matter of principle.
+    And that's not just colour, but structure as well, both on the micro and
+    macro side of things.
+
+
+
