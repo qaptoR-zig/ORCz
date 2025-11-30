@@ -1,0 +1,163 @@
+
+
+
+
+
+  I. ManagedArrayList
+
+
+    '::    ::'                                       '::
+     :::  :::  ....  .. ...   ....   ... .  ....   .. ::
+     :':..':: '' .::  ::  :: '' .:: :: :: .:...::.'  '::
+     : ':' :: .:' ::  ::  :: .:' ::  :''  ::     :.   ::
+    .:. : .::.':..':'.::. ::.':..':''::::. ':...'':..'::.
+                                    .:....'
+        :                                '::'      ::         .
+       :::   ... .. ... ..  .... .... ... ::      ...  .... .::.
+      :  ::   ::' '' ::' '''' .:: ':.  :  ::       :: ::. '  ::
+     .'''':.  ::     ::    .:' ::  ':.:   ::     , :: . ':.. ::
+    .:.  .::..::.   .::.   ':..':'  ':   .::.....:.::.:'..:' ':.'
+                                  .. :
+                                   ''
+
+  I.i. Description
+
+
+  I.ii. Fields
+
+  - list
+  - allocator
+
+
+  I.ii.A. Field Details
+
+[Field: list]&
+    The underlying Unmanaged ArrayList
+
+[Field: allocator]&
+    The reference to the allocator used to manage this ArrayList
+
+
+  I.ii. Methods
+
+  - Initialization:
+    init, deinit
+
+  - Adding Items:
+    append, appendSlice, insert
+
+  - Removing Items:
+    pop, orderedRemove, swapRemove
+
+  - Capacity/Size:
+    resize, ensureTotalCapacity, clearRetainingCapacity
+
+  - Transfer:
+    toOwnedSlice, clone
+
+  - Accessor:
+    len, getLast, items
+
+
+  I.ii.A. Method Details
+
+[Method: init]&
+    Set up ManagedArrayList with allocator.
+
+
+[Method: deinit]&
+    Release all allocated memory.
+
+
+[Method: append]&
+    Extend the list by 1 element.
+    Allocates more memory as necessary.
+    Invalidates element pointers if additional memory is needed.
+
+    [Parameter: item_] The value to insert at end.
+
+
+[Method: appendSlice]&
+    Append the slice of items to the list.
+    Allocates more memory as necessary.
+    Invalidates element pointers if additional memory is needed.
+
+    [Parameter: items_] The slice of items to insert at end.
+
+
+[Method: insert]&
+    Insert [`item_`] at index [`i_`].
+    Moves [`list[i_ .. list.len]`] to higher indices to make room.
+    If [`i_`] equals [`self.len`], this operation is equivalent to append.
+    This operation is O(N).
+    Invalidates element pointers if additional memory is needed.
+    Asserts that the index is in bounds or equal to the length.
+
+    [Parameter: i_] The index to insert at.
+
+
+[Method: pop]&
+    Removes and returns the last item.
+    Asserts that the list is not empty.
+
+
+[Method: orderedRemove]&
+    Removes item at index [`i_`] and returns it.
+    Shifts all subsequent items to the left.
+
+    [Parameter: i_] The index to remove.
+
+
+[Method: swapRemove]&
+    Removes item at index [`i_`] by swapping it with the last item.
+    Faster than orderedRemove but does not preserve order.
+    Returns the removed item.
+
+    [Parameter: i_] The index to remove.
+
+
+[Method: resize]&
+    Resizes the list to [`new_len_`] length.
+    The new items will be [`undefined`].
+
+    [Parameter: new_len_] The new length of the list
+
+
+[Method: ensureTotalCapacity]&
+    Ensures there is capacity for at least [`new_capacity_`] items.
+
+    [Parameter: new_capacity_] The new minumum size of the capacity.
+
+
+[Method: clearRetainingCapacity]&
+    Removes all items from the list.
+    Keeps the underlying memory allocation.
+
+
+[Method: clone]&
+    Returns a copy of this ManagedArrayList.
+    Uses the same allocator.
+
+
+[Method: toOwnedSlice]&
+    Creates a new, separate slice containing all items from the list.
+    The caller is responsible for freeing the slice's memory.
+
+
+[Method: len]&
+    Returns the number of items in the list.
+
+
+[Method: getLast]&
+    Returns the value of the last element without removing it.
+    Asserts that the list is not empty.
+
+
+[Method: items]&
+    Returns a slice containg the contents of the underlying list.
+    Same as accessing via [`self.list.items`]
+
+
+
+
+
